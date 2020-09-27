@@ -10,6 +10,23 @@ that object*/
  of function in javascript, it use "Function()" method to create
  the particular function.*/ 
 
+/*A constructor is a function that creates an instance of a class which is typically called an “object”. 
+In JavaScript, a constructor gets called when you declare an object using the new keyword.
+
+The purpose of a constructor is to create an object and set values if there are any object properties present.
+It’s a neat way to create an object because you do not need to explicitly state what to return as the constructor 
+function, by default, returns the object that gets created within it.
+
+What happens when a constructor gets called?
+
+In JavaScript, here’s what happens when a constructor is invoked:
+
+  * A new empty object is created
+
+  * "this" keyword starts referring to that newly created object and hence it becomes the current instance object
+
+  * The newly created object is then returned as the constructor’s returned value*/
+
 // Constructor function for Person objects
 function Person(first, last, age, eye) {
   this.firstName = first;
@@ -26,6 +43,10 @@ console.log(myFather.age);
 
 // Display firstname
 console.log(myFather.firstName);
+
+var myMother = new Person("Bobby", "Sharma", 40, "brown");
+// Display firstname
+console.log(myMother.firstName);
 
 // The new keyword does the following things:
 //  1.Creates a blank, plain JavaScript object;
